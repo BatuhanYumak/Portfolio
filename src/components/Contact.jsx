@@ -37,8 +37,8 @@ export default function Contact() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">Contact</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-12" />
+          <h2 className="text-2xl font-bold text-navy mb-3">Contact</h2>
+          <div className="w-10 h-[3px] bg-navy mb-12" />
 
           <div className="text-center">
             <p className="text-[#6B7280] mb-10">
@@ -48,7 +48,7 @@ export default function Contact() {
             <div className="flex items-center justify-center gap-10 flex-wrap">
               <a
                 href="mailto:b.yumak70@gmail.com"
-                className="flex items-center gap-2.5 text-sm font-medium text-[#0D1B2A] hover:underline"
+                className="flex items-center gap-2.5 text-sm font-medium text-navy hover:underline"
               >
                 <EmailIcon />
                 b.yumak70@gmail.com
@@ -58,7 +58,7 @@ export default function Contact() {
                 href="https://github.com/BatuhanYumak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-sm font-medium text-[#0D1B2A] hover:underline"
+                className="flex items-center gap-2.5 text-sm font-medium text-navy hover:underline"
               >
                 <GitHubIcon />
                 github.com/BatuhanYumak
@@ -68,7 +68,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/batuhanyumak/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-sm font-medium text-[#0D1B2A] hover:underline"
+                className="flex items-center gap-2.5 text-sm font-medium text-navy hover:underline"
               >
                 <LinkedInIcon />
                 linkedin.com/in/batuhanyumak

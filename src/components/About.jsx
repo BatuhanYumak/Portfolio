@@ -1,4 +1,27 @@
+import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
+import profilePhoto from '../assets/profile.jpg'
+
+function ProfilePhoto() {
+  const [error, setError] = useState(false)
+
+  if (error) {
+    return (
+      <div className="w-[280px] h-[280px] rounded-lg border border-[#E5E7EB] bg-[#F3F4F6] flex items-center justify-center flex-shrink-0">
+        <span className="text-sm text-[#6B7280]">Photo</span>
+      </div>
+    )
+  }
+
+  return (
+    <img
+      src={profilePhoto}
+      alt="Batuhan Yumak"
+      onError={() => setError(true)}
+      className="w-[280px] h-[280px] rounded-lg border border-[#E5E7EB] object-cover flex-shrink-0"
+    />
+  )
+}
 
 export default function About() {
   const [ref, isVisible] = useInView()
@@ -12,8 +35,8 @@ export default function About() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">About</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-12" />
+          <h2 className="text-2xl font-bold text-navy mb-3">About</h2>
+          <div className="w-10 h-[3px] bg-navy mb-12" />
 
           <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12">
             {/* Left: bio */}
@@ -34,28 +57,32 @@ export default function About() {
               </p>
             </div>
 
-            {/* Right: info box */}
-            <div className="border border-[#E5E7EB] p-6 self-start space-y-5">
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Location</p>
-                <p className="text-sm text-[#0D1B2A]">Amsterdam, Netherlands</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Email</p>
-                <a
-                  href="mailto:b.yumak70@gmail.com"
-                  className="text-sm text-[#0D1B2A] hover:underline"
-                >
-                  b.yumak70@gmail.com
-                </a>
-              </div>
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Languages</p>
-                <p className="text-sm text-[#0D1B2A]">Dutch, Turkish, English</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Available for</p>
-                <p className="text-sm text-[#0D1B2A]">Junior fullstack roles</p>
+            {/* Right: photo + info box */}
+            <div className="flex flex-col gap-6 self-start">
+              <ProfilePhoto />
+
+              <div className="border border-[#E5E7EB] p-6 space-y-5">
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Location</p>
+                  <p className="text-sm text-navy">Amsterdam, Netherlands</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Email</p>
+                  <a
+                    href="mailto:b.yumak70@gmail.com"
+                    className="text-sm text-navy hover:underline"
+                  >
+                    b.yumak70@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Languages</p>
+                  <p className="text-sm text-navy">Dutch, Turkish, English</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Available for</p>
+                  <p className="text-sm text-navy">Junior fullstack roles</p>
+                </div>
               </div>
             </div>
           </div>

@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E7EB]">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-bold text-[#0D1B2A] text-lg tracking-tight select-none">
+        <a href="#" className="font-bold text-navy text-lg tracking-tight select-none">
           BY
         </a>
 
@@ -44,9 +44,9 @@ export default function Navbar() {
               <a
                 key={label}
                 href={href}
-                className={`text-sm font-medium text-[#0D1B2A] pb-0.5 transition-opacity ${
+                className={`text-sm font-medium text-navy pb-0.5 transition-opacity ${
                   isActive
-                    ? 'border-b-2 border-[#0D1B2A]'
+                    ? 'border-b-2 border-navy'
                     : 'hover:opacity-60'
                 }`}
               >
@@ -63,17 +63,17 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-[#0D1B2A] transition-transform origin-center duration-200 ${
+            className={`block w-6 h-0.5 bg-navy transition-transform origin-center duration-200 ${
               menuOpen ? 'rotate-45 translate-y-2' : ''
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#0D1B2A] transition-opacity duration-200 ${
+            className={`block w-6 h-0.5 bg-navy transition-opacity duration-200 ${
               menuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#0D1B2A] transition-transform origin-center duration-200 ${
+            className={`block w-6 h-0.5 bg-navy transition-transform origin-center duration-200 ${
               menuOpen ? '-rotate-45 -translate-y-2' : ''
             }`}
           />
@@ -88,7 +88,7 @@ export default function Navbar() {
               key={label}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="block px-6 py-4 text-sm font-medium text-[#0D1B2A] hover:bg-gray-50 transition-colors"
+              className="block px-6 py-4 text-sm font-medium text-navy hover:bg-gray-50 transition-colors"
             >
               {label}
             </a>
