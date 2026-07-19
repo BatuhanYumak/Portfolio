@@ -23,17 +23,17 @@ const PROJECTS = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="bg-white border border-[#E5E7EB] rounded-lg p-6 flex flex-col gap-4 hover:border-[#0D1B2A] transition-colors duration-200"
+    <div className="bg-white border border-[#E5E7EB] rounded-lg p-6 flex flex-col gap-4 hover:border-navy transition-colors duration-200"
       style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
       <div>
-        <h3 className="text-[18px] font-bold text-[#0D1B2A] mb-1">{project.name}</h3>
+        <h3 className="text-[18px] font-bold text-navy mb-1">{project.name}</h3>
         <p className="text-[14px] text-[#6B7280]">{project.description}</p>
       </div>
 
       {project.tech.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {project.tech.map(t => (
-            <span key={t} className="px-4 py-1.5 text-[13px] font-medium text-[#0D1B2A] border border-[#E5E7EB] rounded-full bg-white">
+            <span key={t} className="px-4 py-1.5 text-[13px] font-medium text-navy border border-[#E5E7EB] rounded-full bg-white">
               {t}
             </span>
           ))}
@@ -44,7 +44,7 @@ function ProjectCard({ project }) {
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto text-[14px] font-medium text-[#0D1B2A] no-underline hover:underline"
+        className="mt-auto text-[14px] font-medium text-navy no-underline hover:underline"
       >
         View on GitHub →
       </a>
@@ -64,8 +64,8 @@ export default function Projects() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">Projects</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-4" />
+          <h2 className="text-2xl font-bold text-navy mb-3">Projects</h2>
+          <div className="w-10 h-[3px] bg-navy mb-4" />
           <p className="text-sm text-[#6B7280] mb-12">
             More projects are being added. See the full list on GitHub.
           </p>
@@ -81,7 +81,7 @@ export default function Projects() {
               href="https://github.com/BatuhanYumak"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-[#0D1B2A] text-[#0D1B2A] text-sm font-medium hover:bg-[#0D1B2A] hover:text-white transition-colors"
+              className="px-6 py-3 border border-navy text-navy text-sm font-medium hover:bg-navy hover:text-white transition-colors"
             >
               View all on GitHub
             </a>

@@ -54,11 +54,11 @@ function Timeline({ items, keyField }) {
       {items.map((item, i) => (
         <div key={i} className="relative mb-10 last:mb-0">
           {/* Dot */}
-          <div className="absolute -left-7 top-1 w-3 h-3 rounded-full border-2 border-[#0D1B2A] bg-white" />
+          <div className="absolute -left-7 top-1 w-3 h-3 rounded-full border-2 border-navy bg-white" />
 
           <div>
-            <p className="font-bold text-[#0D1B2A]">{item[keyField]}</p>
-            <p className="text-[#0D1B2A] text-sm">{item.degree ?? item.role}</p>
+            <p className="font-bold text-navy">{item[keyField]}</p>
+            <p className="text-navy text-sm">{item.degree ?? item.role}</p>
             <p className="text-[14px] text-[#6B7280] mt-0.5 mb-3">{item.period}</p>
 
             {item.note && (
@@ -69,7 +69,7 @@ function Timeline({ items, keyField }) {
               <ul className="space-y-2">
                 {item.bullets.map((b, j) => (
                   <li key={j} className="text-[14px] text-[#6B7280] flex gap-2">
-                    <span className="text-[#0D1B2A] shrink-0 mt-px">—</span>
+                    <span className="text-navy shrink-0 mt-px">—</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -96,8 +96,8 @@ export default function Experience() {
             expVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">Experience</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-12" />
+          <h2 className="text-2xl font-bold text-navy mb-3">Experience</h2>
+          <div className="w-10 h-[3px] bg-navy mb-12" />
           <Timeline items={EXPERIENCE} keyField="company" />
         </div>
 
@@ -108,8 +108,8 @@ export default function Experience() {
             eduVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">Education</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-12" />
+          <h2 className="text-2xl font-bold text-navy mb-3">Education</h2>
+          <div className="w-10 h-[3px] bg-navy mb-12" />
           <Timeline items={EDUCATION} keyField="institution" />
         </div>
       </div>

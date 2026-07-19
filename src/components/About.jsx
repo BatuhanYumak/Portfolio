@@ -12,8 +12,8 @@ export default function About() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <h2 className="text-2xl font-bold text-[#0D1B2A] mb-3">About</h2>
-          <div className="w-10 h-[3px] bg-[#0D1B2A] mb-12" />
+          <h2 className="text-2xl font-bold text-navy mb-3">About</h2>
+          <div className="w-10 h-[3px] bg-navy mb-12" />
 
           <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12">
             {/* Left: bio */}
@@ -38,24 +38,24 @@ export default function About() {
             <div className="border border-[#E5E7EB] p-6 self-start space-y-5">
               <div>
                 <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Location</p>
-                <p className="text-sm text-[#0D1B2A]">Amsterdam, Netherlands</p>
+                <p className="text-sm text-navy">Amsterdam, Netherlands</p>
               </div>
               <div>
                 <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Email</p>
                 <a
                   href="mailto:b.yumak70@gmail.com"
-                  className="text-sm text-[#0D1B2A] hover:underline"
+                  className="text-sm text-navy hover:underline"
                 >
                   b.yumak70@gmail.com
                 </a>
               </div>
               <div>
                 <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Languages</p>
-                <p className="text-sm text-[#0D1B2A]">Dutch, Turkish, English</p>
+                <p className="text-sm text-navy">Dutch, Turkish, English</p>
               </div>
               <div>
                 <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Available for</p>
-                <p className="text-sm text-[#0D1B2A]">Junior fullstack roles</p>
+                <p className="text-sm text-navy">Junior fullstack roles</p>
               </div>
             </div>
           </div>
