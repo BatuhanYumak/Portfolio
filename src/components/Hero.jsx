@@ -1,0 +1,43 @@
+export default function Hero() {
+  return (
+    <section className="min-h-screen flex items-center">
+      <div className="max-w-5xl mx-auto px-6 pt-16 w-full">
+        <p className="text-[13px] font-medium uppercase tracking-[0.15em] text-[#0D1B2A] mb-5">
+          Fullstack Developer
+        </p>
+
+        <h1 className="font-bold text-[#0D1B2A] leading-none mb-6 text-[40px] md:text-[72px]">
+          Batuhan Yumak
+        </h1>
+
+        <p className="text-[#6B7280] text-lg mb-10 max-w-lg">
+          I build complete web applications, from database to interface.
+        </p>
+
+        <div className="flex items-center gap-4 flex-wrap mb-16">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-[#0D1B2A] text-white text-sm font-medium hover:opacity-80 transition-opacity"
+          >
+            View Projects
+          </a>
+          <a
+            href="https://github.com/BatuhanYumak"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 border border-[#0D1B2A] text-[#0D1B2A] text-sm font-medium hover:bg-[#0D1B2A] hover:text-white transition-colors"
+          >
+            GitHub
+          </a>
+        </div>
+
+        {/* Stats row */}
+        <div className="flex items-center divide-x divide-[#E5E7EB]">
+          <span className="text-sm font-medium text-[#0D1B2A] pr-8">2 internships</span>
+          <span className="text-sm font-medium text-[#0D1B2A] px-8">MBO + HBO</span>
+          <span className="text-sm font-medium text-[#0D1B2A] pl-8">Amsterdam</span>
+        </div>
+      </div>
+    </section>
+  )
+}
