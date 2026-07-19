@@ -33,9 +33,9 @@ export default function Hero() {
 
         {/* Stats row */}
         <div className="flex items-center divide-x divide-[#E5E7EB]">
-          <span className="text-sm font-medium text-[#0D1B2A] pr-8">2 internships</span>
-          <span className="text-sm font-medium text-[#0D1B2A] px-8">MBO + HBO</span>
-          <span className="text-sm font-medium text-[#0D1B2A] pl-8">Amsterdam</span>
+          <span className="text-sm font-medium text-[#0D1B2A] pr-6 whitespace-nowrap">2 internships</span>
+          <span className="text-sm font-medium text-[#0D1B2A] px-6 whitespace-nowrap">MBO + HBO</span>
+          <span className="text-sm font-medium text-[#0D1B2A] pl-6 whitespace-nowrap">Amsterdam</span>
         </div>
       </div>
     </section>
