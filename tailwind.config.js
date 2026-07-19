@@ -10,7 +10,7 @@ export default {
         sans: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
-        navy: '#0D1B2A',
+        navy: '#000080',
         muted: '#6B7280',
         border: '#E5E7EB',
       },

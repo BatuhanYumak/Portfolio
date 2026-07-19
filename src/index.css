@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-navy: #000080;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,5 +13,5 @@ html {
 body {
   font-family: 'Space Grotesk', sans-serif;
   background-color: #ffffff;
-  color: #0D1B2A;
+  color: #000080;
 }
