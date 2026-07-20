@@ -2,22 +2,23 @@ import { useInView } from '../hooks/useInView'
 
 const PROJECTS = [
   {
-    name: 'Project 1',
-    description: 'Coming soon — check GitHub for the latest.',
-    tech: [],
-    link: 'https://github.com/BatuhanYumak',
+    name: 'ProgressTracker',
+    description: 'Full-stack mobile app for logging gym sessions, visualising strength trends, and tracking estimated 1-rep max over time.',
+    tech: ['React Native', 'TypeScript', 'Django REST Framework', 'PostgreSQL', 'Docker'],
+    link: 'https://github.com/BatuhanYumak/ProgressTracker',
   },
   {
-    name: 'Project 2',
-    description: 'Coming soon — check GitHub for the latest.',
-    tech: [],
-    link: 'https://github.com/BatuhanYumak',
+    name: 'StemSlim',
+    description: 'Dutch election results platform that processes official EML-XML data and presents results at national, constituency, and municipality level.',
+    tech: ['Java', 'Vue', 'TypeScript', 'Docker'],
+    label: 'School project',
+    link: 'https://github.com/Zoiye1/election-app',
   },
   {
-    name: 'Project 3',
-    description: 'Coming soon — check GitHub for the latest.',
-    tech: [],
-    link: 'https://github.com/BatuhanYumak',
+    name: 'Text Spammer',
+    description: 'Python automation script that lets users configure and send repeated text messages - built to explore the basics of Python and automation.',
+    tech: ['Python'],
+    link: 'https://github.com/BatuhanYumak/Text-Spammer',
   },
 ]
 
@@ -26,7 +27,14 @@ function ProjectCard({ project }) {
     <div className="bg-white border border-[#E5E7EB] rounded-lg p-6 flex flex-col gap-4 hover:border-navy transition-colors duration-200"
       style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
       <div>
-        <h3 className="text-[18px] font-bold text-navy mb-1">{project.name}</h3>
+        <div className="flex items-center gap-2 mb-1">
+          <h3 className="text-[18px] font-bold text-navy">{project.name}</h3>
+          {project.label && (
+            <span className="px-2 py-0.5 text-[11px] font-medium text-[#6B7280] border border-[#E5E7EB] rounded-full">
+              {project.label}
+            </span>
+          )}
+        </div>
         <p className="text-[14px] text-[#6B7280]">{project.description}</p>
       </div>
 
