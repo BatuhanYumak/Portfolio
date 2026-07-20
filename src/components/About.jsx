@@ -1,9 +1,47 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useInView } from '../hooks/useInView'
-import profilePhoto from '../assets/profile.jpg'
+import profilePhoto from '../assets/profile.png'
+
+function Lightbox({ onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="relative max-w-[90vw] max-h-[90vh]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src={profilePhoto}
+          alt="Batuhan Yumak"
+          className="max-w-[90vw] max-h-[90vh] rounded-lg object-contain shadow-2xl"
+        />
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#6B7280] hover:text-navy transition-colors shadow-md text-lg leading-none"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+  )
+}
 
 function ProfilePhoto() {
   const [error, setError] = useState(false)
+  const [open, setOpen] = useState(false)
 
   if (error) {
     return (
@@ -14,12 +52,16 @@ function ProfilePhoto() {
   }
 
   return (
-    <img
-      src={profilePhoto}
-      alt="Batuhan Yumak"
-      onError={() => setError(true)}
-      className="w-[280px] h-[280px] rounded-lg border border-[#E5E7EB] object-cover flex-shrink-0"
-    />
+    <>
+      <img
+        src={profilePhoto}
+        alt="Batuhan Yumak"
+        onError={() => setError(true)}
+        onClick={() => setOpen(true)}
+        className="w-[280px] h-[280px] rounded-lg border border-[#E5E7EB] object-cover flex-shrink-0 cursor-zoom-in transition-opacity hover:opacity-90"
+      />
+      {open && <Lightbox onClose={() => setOpen(false)} />}
+    </>
   )
 }
 
