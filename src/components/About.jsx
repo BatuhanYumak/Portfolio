@@ -119,11 +119,7 @@ export default function About() {
                 </div>
                 <div>
                   <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Languages</p>
-                  <p className="text-sm text-navy">Dutch, Turkish, English</p>
-                </div>
-                <div>
-                  <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#6B7280] mb-1">Available for</p>
-                  <p className="text-sm text-navy">Junior fullstack roles</p>
+                  <p className="text-sm text-navy">Dutch, Turkish,English, Arabic</p>
                 </div>
               </div>
             </div>

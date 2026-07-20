@@ -3,11 +3,11 @@ import { useInView } from '../hooks/useInView'
 const SKILL_COLUMNS = [
   {
     category: 'Languages',
-    items: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
+    items: ['Python', 'Java', 'TypeScript', 'JavaScript', 'SQL'],
   },
   {
     category: 'Frameworks & Tools',
-    items: ['Django Rest Framework', 'React', 'Docker', 'Git', 'AFAS Profit'],
+    items: ['Django Rest Framework', 'React', 'Docker', 'Git', 'CLI', 'AFAS Profit'],
   },
   {
     category: 'Methodology',

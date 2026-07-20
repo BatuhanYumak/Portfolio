@@ -61,7 +61,7 @@ export default function Contact() {
                 className="flex items-center gap-2.5 text-sm font-medium text-navy hover:underline"
               >
                 <GitHubIcon />
-                github.com/BatuhanYumak
+                BatuhanYumak
               </a>
 
               <a
@@ -71,7 +71,7 @@ export default function Contact() {
                 className="flex items-center gap-2.5 text-sm font-medium text-navy hover:underline"
               >
                 <LinkedInIcon />
-                linkedin.com/in/batuhanyumak
+                BatuhanYumak
               </a>
             </div>
           </div>
